@@ -6,7 +6,7 @@ class MyTheme {
         appBarTheme: AppBarTheme(
           color: Colors.white,
           elevation: 0.0,
-          iconTheme: IconThemeData(
+          iconTheme: const IconThemeData(
             color: Colors.black,
           ),
           toolbarTextStyle: Theme.of(context).textTheme.bodyText2,
