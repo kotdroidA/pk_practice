@@ -38,8 +38,8 @@ class HomeDetailsPage extends StatelessWidget {
                   const StadiumBorder(),
                 ),
               ),
-              child: "Buy".text.make(),
-            ).wh(100, 50)
+              child: "Add to Cart".text.make(),
+            ).wh(120, 50)
           ],
         ).p32(),
       ),
@@ -69,6 +69,11 @@ class HomeDetailsPage extends StatelessWidget {
                           .xl
                           .make(),
                       10.heightBox,
+                      "This handy tool helps you create dummy text for all your layout need. We are gradually adding functionality and we welcome your suggestions and feedback."
+                          .text
+                          .textStyle(context.captionStyle)
+                          .make()
+                          .p16(),
                     ],
                   ).py64(),
                 ),
