@@ -11,7 +11,16 @@ class HomeDetailsPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
+      appBar: AppBar(
+        centerTitle: true,
+        title: Title(
+          color: Colors.black,
+          child: "Product Details".text.bold.xl3.black.make(),
+        ),
+        elevation: 0,
+        backgroundColor: Colors.transparent,
+        iconTheme: const IconThemeData(color: Colors.black),
+      ),
       backgroundColor: MyTheme.creamColor,
       bottomNavigationBar: Container(
         color: Colors.white,
@@ -44,7 +53,7 @@ class HomeDetailsPage extends StatelessWidget {
             ).h32(context),
             Expanded(
               child: VxArc(
-                height: 10.0,
+                height: 15.0,
                 arcType: VxArcType.CONVEY,
                 edge: VxEdge.TOP,
                 child: Container(
