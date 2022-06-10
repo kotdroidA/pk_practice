@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:pk_practice/widgets/themes.dart';
 import 'package:velocity_x/velocity_x.dart';
 
 import '../models/catalog.dart';
@@ -15,15 +14,16 @@ class HomeDetailsPage extends StatelessWidget {
         centerTitle: true,
         title: Title(
           color: Colors.black,
-          child: "Product Details".text.bold.xl3.black.make(),
+          child:
+              "Product Details".text.bold.xl3.color(context.accentColor).make(),
         ),
         elevation: 0,
         backgroundColor: Colors.transparent,
-        iconTheme: const IconThemeData(color: Colors.black),
+        iconTheme: const IconThemeData(color: Colors.white),
       ),
-      backgroundColor: MyTheme.creamColor,
+      backgroundColor: context.canvasColor,
       bottomNavigationBar: Container(
-        color: Colors.white,
+        color: context.cardColor,
         child: ButtonBar(
           alignment: MainAxisAlignment.spaceBetween,
           buttonPadding: EdgeInsets.zero,
@@ -32,8 +32,7 @@ class HomeDetailsPage extends StatelessWidget {
             ElevatedButton(
               onPressed: () {},
               style: ButtonStyle(
-                backgroundColor:
-                    MaterialStateProperty.all(MyTheme.darkBluishColor),
+                backgroundColor: MaterialStateProperty.all(Colors.deepPurple),
                 shape: MaterialStateProperty.all(
                   const StadiumBorder(),
                 ),
@@ -58,11 +57,11 @@ class HomeDetailsPage extends StatelessWidget {
                 edge: VxEdge.TOP,
                 child: Container(
                   width: context.screenWidth,
-                  color: Colors.white,
+                  color: context.cardColor,
                   child: Column(
                     children: [
                       catalog.name.text.bold.xl4
-                          .color(MyTheme.darkBluishColor)
+                          .color(context.accentColor)
                           .make(),
                       catalog.desc.text
                           .textStyle(context.captionStyle)
