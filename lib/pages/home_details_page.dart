@@ -19,7 +19,7 @@ class HomeDetailsPage extends StatelessWidget {
         ),
         elevation: 0,
         backgroundColor: Colors.transparent,
-        iconTheme: const IconThemeData(color: Colors.white),
+        iconTheme: const IconThemeData(color: Colors.black),
       ),
       backgroundColor: context.canvasColor,
       bottomNavigationBar: Container(
