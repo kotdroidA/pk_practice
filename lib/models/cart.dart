@@ -1,13 +1,16 @@
 import 'package:pk_practice/models/catalog.dart';
 
 class CartModel {
+  static final cartModel = CartModel.internal();
+  CartModel.internal();
+  factory CartModel() => cartModel;
   //catalog field
   late CatalogModel _catalog;
   //Collection of IDs - store Ids of each item
   final List<int> _itemIds = [];
   //Get Catalog
   CatalogModel get catalog => _catalog;
-  set cartModel(CatalogModel newCatalog) {
+  set catalog(CatalogModel newCatalog) {
     assert(newCatalog != null);
     _catalog = newCatalog;
   }
